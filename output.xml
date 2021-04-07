@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.6.5 on win32)" generated="20210407 16:25:53.305" rpa="false">
+<suite id="s1" name="Tc" source="E:\RFback\task08接task07B继续做\tc">
+<suite id="s1-s1" name="webUI操作" source="E:\RFback\task08接task07B继续做\tc\webUI操作">
+<kw name="Setup Website" library="pyLib.WebAdmin" type="setup">
+<status status="PASS" starttime="20210407 16:25:53.544" endtime="20210407 16:26:00.653"></status>
+</kw>
+<suite id="s1-s1-s1" name="管理员登录" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录">
+<kw name="Login System" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>&amp;{database}[name]</arg>
+<arg>&amp;{database}[pw]</arg>
+</arguments>
+<msg timestamp="20210407 16:26:00.671" level="WARN">Accessing variable items using '&amp;{database}[name]' syntax is deprecated. Use '${database}[name]' instead.</msg>
+<msg timestamp="20210407 16:26:00.682" level="WARN">Accessing variable items using '&amp;{database}[pw]' syntax is deprecated. Use '${database}[pw]' instead.</msg>
+<status status="PASS" starttime="20210407 16:26:00.669" endtime="20210407 16:26:04.445"></status>
+</kw>
+<suite id="s1-s1-s1-s1" name="空白数据" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>deleteList</arg>
+<arg>student</arg>
+<arg>AND</arg>
+<arg>deleteList</arg>
+<arg>schedule</arg>
+<arg>AND</arg>
+<arg>deleteList</arg>
+<arg>class</arg>
+<arg>AND</arg>
+<arg>deleteList</arg>
+<arg>teacher</arg>
+<arg>AND</arg>
+<arg>deleteList</arg>
+<arg>course</arg>
+</arguments>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>student</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:04.470" endtime="20210407 16:26:07.612"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>schedule</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:07.613" endtime="20210407 16:26:09.750"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>class</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:09.750" endtime="20210407 16:26:11.867"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>teacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:11.868" endtime="20210407 16:26:14.018"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>course</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:14.018" endtime="20210407 16:26:16.215"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:26:04.470" endtime="20210407 16:26:16.215"></status>
+</kw>
+<suite id="s1-s1-s1-s1-s1" name="有初中语文初中数学课程" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>deleteList</arg>
+<arg>course</arg>
+<arg>AND</arg>
+<arg>addCourse</arg>
+<arg>初中语文</arg>
+<arg>初中语文描述</arg>
+<arg>1</arg>
+<arg>AND</arg>
+<arg>addCourse</arg>
+<arg>初中数学</arg>
+<arg>初中数学描述</arg>
+<arg>2</arg>
+</arguments>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>course</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:16.232" endtime="20210407 16:26:18.299"></status>
+</kw>
+<kw name="Add Course" library="pyLib.WebAdmin">
+<arguments>
+<arg>初中语文</arg>
+<arg>初中语文描述</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:18.299" endtime="20210407 16:26:21.366"></status>
+</kw>
+<kw name="Add Course" library="pyLib.WebAdmin">
+<arguments>
+<arg>初中数学</arg>
+<arg>初中数学描述</arg>
+<arg>2</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:21.367" endtime="20210407 16:26:24.382"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:26:16.231" endtime="20210407 16:26:24.382"></status>
+</kw>
+<suite id="s1-s1-s1-s1-s1-s1" name="testCases" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程\testCases.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="用例3:添加培训班">
+<kw name="Delete List" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>class</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:24.407" endtime="20210407 16:26:26.573"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["初中语文","初中数学"]</arg>
+</arguments>
+<assign>
+<var>${containCourse}</var>
+</assign>
+<msg timestamp="20210407 16:26:26.575" level="INFO">${containCourse} = ['初中语文', '初中数学']</msg>
+<status status="PASS" starttime="20210407 16:26:26.575" endtime="20210407 16:26:26.575"></status>
+</kw>
+<kw name="Add Class" library="pyLib.WebAdmin">
+<arguments>
+<arg>python培训班(初中班)</arg>
+<arg>python培训班(初中班)详情描述</arg>
+<arg>1</arg>
+<arg>${containCourse}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:26.577" endtime="20210407 16:26:32.283"></status>
+</kw>
+<kw name="List Training Course List" library="pyLib.WebAdmin">
+<assign>
+<var>${classList}</var>
+</assign>
+<msg timestamp="20210407 16:26:33.421" level="INFO">${classList} = ['python培训班(初中班)']</msg>
+<status status="PASS" starttime="20210407 16:26:32.284" endtime="20210407 16:26:33.421"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${classList}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:33.423" endtime="20210407 16:26:33.425"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["python培训班(初中班)"]</arg>
+</arguments>
+<assign>
+<var>${classListExcepted}</var>
+</assign>
+<msg timestamp="20210407 16:26:33.428" level="INFO">${classListExcepted} = ['python培训班(初中班)']</msg>
+<status status="PASS" starttime="20210407 16:26:33.427" endtime="20210407 16:26:33.428"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$classListExcepted==$classList</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:33.431" endtime="20210407 16:26:33.443"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>class</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:33.444" endtime="20210407 16:26:36.899"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:26:24.401" endtime="20210407 16:26:36.900" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="添加老师功能1">
+<kw name="Delete List" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>teacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:36.911" endtime="20210407 16:26:39.116"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["初中语文"]</arg>
+</arguments>
+<assign>
+<var>${teachCourseList1}</var>
+</assign>
+<msg timestamp="20210407 16:26:39.117" level="INFO">${teachCourseList1} = ['初中语文']</msg>
+<status status="PASS" starttime="20210407 16:26:39.117" endtime="20210407 16:26:39.118"></status>
+</kw>
+<kw name="Add Teacher" library="pyLib.WebAdmin">
+<arguments>
+<arg>陈玉平</arg>
+<arg>chenyuping</arg>
+<arg>tony老师</arg>
+<arg>2</arg>
+<arg>${teachCourseList1}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:39.119" endtime="20210407 16:26:43.489"></status>
+</kw>
+<kw name="List Teacher" library="pyLib.WebAdmin">
+<assign>
+<var>${retTeacherList}</var>
+</assign>
+<msg timestamp="20210407 16:26:43.628" level="INFO">${retTeacherList} = ['陈玉平']</msg>
+<status status="PASS" starttime="20210407 16:26:43.490" endtime="20210407 16:26:43.628"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["陈玉平"]</arg>
+</arguments>
+<assign>
+<var>${exceptedTeacher}</var>
+</assign>
+<msg timestamp="20210407 16:26:43.630" level="INFO">${exceptedTeacher} = ['陈玉平']</msg>
+<status status="PASS" starttime="20210407 16:26:43.629" endtime="20210407 16:26:43.630"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$retTeacherList==$exceptedTeacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:43.632" endtime="20210407 16:26:43.633"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>teacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:43.634" endtime="20210407 16:26:47.129"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:26:36.907" endtime="20210407 16:26:47.130" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t3" name="添加老师功能2">
+<kw name="Delete List" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>teacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:47.140" endtime="20210407 16:26:49.265"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["初中语文"]</arg>
+</arguments>
+<assign>
+<var>${teachCourseList1}</var>
+</assign>
+<msg timestamp="20210407 16:26:49.267" level="INFO">${teachCourseList1} = ['初中语文']</msg>
+<status status="PASS" starttime="20210407 16:26:49.267" endtime="20210407 16:26:49.267"></status>
+</kw>
+<kw name="Add Teacher" library="pyLib.WebAdmin">
+<arguments>
+<arg>陈玉平</arg>
+<arg>chenyuping</arg>
+<arg>tony老师</arg>
+<arg>2</arg>
+<arg>${teachCourseList1}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:49.269" endtime="20210407 16:26:52.651"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["初中数学"]</arg>
+</arguments>
+<assign>
+<var>${teachCourseList2}</var>
+</assign>
+<msg timestamp="20210407 16:26:52.654" level="INFO">${teachCourseList2} = ['初中数学']</msg>
+<status status="PASS" starttime="20210407 16:26:52.653" endtime="20210407 16:26:52.654"></status>
+</kw>
+<kw name="Add Teacher" library="pyLib.WebAdmin">
+<arguments>
+<arg>伍长连</arg>
+<arg>wuzhanglian</arg>
+<arg>mary老师</arg>
+<arg>1</arg>
+<arg>${teachCourseList2}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:52.655" endtime="20210407 16:26:56.051"></status>
+</kw>
+<kw name="List Teacher" library="pyLib.WebAdmin">
+<assign>
+<var>${retTeacherList}</var>
+</assign>
+<msg timestamp="20210407 16:26:56.232" level="INFO">${retTeacherList} = ['伍长连', '陈玉平']</msg>
+<status status="PASS" starttime="20210407 16:26:56.052" endtime="20210407 16:26:56.232"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["伍长连","陈玉平"]</arg>
+</arguments>
+<assign>
+<var>${exceptedTeacher}</var>
+</assign>
+<msg timestamp="20210407 16:26:56.234" level="INFO">${exceptedTeacher} = ['伍长连', '陈玉平']</msg>
+<status status="PASS" starttime="20210407 16:26:56.233" endtime="20210407 16:26:56.234"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$retTeacherList==$exceptedTeacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:56.235" endtime="20210407 16:26:56.236"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>teacher</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:26:56.238" endtime="20210407 16:27:01.061"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:26:47.135" endtime="20210407 16:27:01.063" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210407 16:26:24.382" endtime="20210407 16:27:01.071"></status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s2" name="有初中班" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程\有初中班">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>deleteList</arg>
+<arg>class</arg>
+<arg>AND</arg>
+<arg>addClass</arg>
+<arg>初中班</arg>
+<arg>初中班描述</arg>
+<arg>1</arg>
+<arg>${containCourse}</arg>
+</arguments>
+<kw name="Delete List" library="pyLib.WebAdmin">
+<arguments>
+<arg>class</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:01.101" endtime="20210407 16:27:03.300"></status>
+</kw>
+<kw name="Add Class" library="pyLib.WebAdmin">
+<arguments>
+<arg>初中班</arg>
+<arg>初中班描述</arg>
+<arg>1</arg>
+<arg>${containCourse}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:03.300" endtime="20210407 16:27:08.518"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:27:01.100" endtime="20210407 16:27:08.518"></status>
+</kw>
+<suite id="s1-s1-s1-s1-s1-s2-s1" name="testCases" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程\有初中班\testCases.robot">
+<test id="s1-s1-s1-s1-s1-s2-s1-t1" name="用例4:添加培训班期">
+<kw name="Delete List" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>schedule</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:08.540" endtime="20210407 16:27:10.749"></status>
+</kw>
+<kw name="Add Training Schedule" library="pyLib.WebAdmin">
+<arguments>
+<arg>python培训班01期</arg>
+<arg>python培训班01期描述</arg>
+<arg>1</arg>
+<arg>${belongClass}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:10.751" endtime="20210407 16:27:13.852"></status>
+</kw>
+<kw name="List Training Schedule List" library="pyLib.WebAdmin">
+<assign>
+<var>${trainingScheduleList}</var>
+</assign>
+<msg timestamp="20210407 16:27:14.972" level="INFO">${trainingScheduleList} = ['python培训班01期']</msg>
+<status status="PASS" starttime="20210407 16:27:13.854" endtime="20210407 16:27:14.972"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$trainingScheduleList==["python培训班01期"]</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:14.974" endtime="20210407 16:27:14.975"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>schedule</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:14.977" endtime="20210407 16:27:18.417"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:27:08.536" endtime="20210407 16:27:18.418" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210407 16:27:08.518" endtime="20210407 16:27:18.425"></status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s2-s2" name="初中班1期" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程\有初中班\初中班1期">
+<kw name="Add Training Schedule" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>初中班1期</arg>
+<arg>初中班1期描述</arg>
+<arg>1</arg>
+<arg>${belongClass}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:18.453" endtime="20210407 16:27:21.435"></status>
+</kw>
+<suite id="s1-s1-s1-s1-s1-s2-s2-s1" name="学生管理" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程\有初中班\初中班1期\学生管理">
+<suite id="s1-s1-s1-s1-s1-s2-s2-s1-s1" name="添加学生关羽张飞" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\有初中语文初中数学课程\有初中班\初中班1期\学生管理\添加学生关羽张飞.robot">
+<test id="s1-s1-s1-s1-s1-s2-s2-s1-s1-t1" name="添加学生关羽张飞">
+<kw name="Delete List" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>student</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:21.463" endtime="20210407 16:27:23.692"></status>
+</kw>
+<kw name="Add Student" library="pyLib.WebAdmin">
+<arguments>
+<arg>关羽</arg>
+<arg>guanyu</arg>
+<arg>青龙偃月刀</arg>
+<arg>${belongclass}</arg>
+<arg>${belongschedule}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:23.694" endtime="20210407 16:27:26.720"></status>
+</kw>
+<kw name="Add Student" library="pyLib.WebAdmin">
+<arguments>
+<arg>张飞</arg>
+<arg>zhangfei</arg>
+<arg>丈八蛇矛</arg>
+<arg>${belongclass}</arg>
+<arg>${belongschedule}</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:26.722" endtime="20210407 16:27:29.747"></status>
+</kw>
+<kw name="List Student List" library="pyLib.WebAdmin">
+<assign>
+<var>${studentList}</var>
+</assign>
+<msg timestamp="20210407 16:27:30.875" level="INFO">${studentList} = ['张飞', '关羽']</msg>
+<status status="PASS" starttime="20210407 16:27:29.748" endtime="20210407 16:27:30.875"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$studentList==["张飞","关羽"]</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:30.877" endtime="20210407 16:27:30.877"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>student</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:30.879" endtime="20210407 16:27:35.657"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:27:21.459" endtime="20210407 16:27:35.658" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210407 16:27:21.445" endtime="20210407 16:27:35.664"></status>
+</suite>
+<status status="PASS" starttime="20210407 16:27:21.435" endtime="20210407 16:27:35.685"></status>
+</suite>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>schedule</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:35.699" endtime="20210407 16:27:39.183"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:27:18.439" endtime="20210407 16:27:39.183"></status>
+</suite>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>class</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:39.198" endtime="20210407 16:27:42.671"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:27:01.087" endtime="20210407 16:27:42.672"></status>
+</suite>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>course</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:42.690" endtime="20210407 16:27:47.580"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:26:16.215" endtime="20210407 16:27:47.580"></status>
+</suite>
+<suite id="s1-s1-s1-s1-s2" name="课程管理" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\课程管理">
+<suite id="s1-s1-s1-s1-s2-s1" name="testCases01" source="E:\RFback\task08接task07B继续做\tc\webUI操作\管理员登录\空白数据\课程管理\testCases01.robot">
+<test id="s1-s1-s1-s1-s2-s1-t1" name="检查添加课程功能">
+<kw name="Delete List" library="pyLib.WebAdmin" type="setup">
+<arguments>
+<arg>course</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:48.050" endtime="20210407 16:27:50.176"></status>
+</kw>
+<kw name="Add Course" library="pyLib.WebAdmin">
+<arguments>
+<arg>python</arg>
+<arg>python课程</arg>
+<arg>2</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:50.177" endtime="20210407 16:27:53.066"></status>
+</kw>
+<kw name="Add Course" library="pyLib.WebAdmin">
+<arguments>
+<arg>java</arg>
+<arg>java课程</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:53.068" endtime="20210407 16:27:56.015"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>["java","python"]</arg>
+</arguments>
+<assign>
+<var>${exceptedCourse}</var>
+</assign>
+<msg timestamp="20210407 16:27:56.017" level="INFO">${exceptedCourse} = ['java', 'python']</msg>
+<status status="PASS" starttime="20210407 16:27:56.016" endtime="20210407 16:27:56.017"></status>
+</kw>
+<kw name="List Course" library="pyLib.WebAdmin">
+<assign>
+<var>${courseList}</var>
+</assign>
+<msg timestamp="20210407 16:27:57.137" level="INFO">${courseList} = ['java', 'python']</msg>
+<status status="PASS" starttime="20210407 16:27:56.017" endtime="20210407 16:27:57.137"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$courseList==$exceptedCourse</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:57.139" endtime="20210407 16:27:57.139"></status>
+</kw>
+<kw name="Delete List" library="pyLib.WebAdmin" type="teardown">
+<arguments>
+<arg>course</arg>
+</arguments>
+<status status="PASS" starttime="20210407 16:27:57.140" endtime="20210407 16:28:02.021"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:27:48.048" endtime="20210407 16:28:02.023" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210407 16:27:47.610" endtime="20210407 16:28:02.030"></status>
+</suite>
+<status status="PASS" starttime="20210407 16:27:47.597" endtime="20210407 16:28:02.049"></status>
+</suite>
+<status status="PASS" starttime="20210407 16:26:04.445" endtime="20210407 16:28:02.072"></status>
+</suite>
+<status status="PASS" starttime="20210407 16:26:00.653" endtime="20210407 16:28:02.095"></status>
+</suite>
+<kw name="Teardown Website" library="pyLib.WebAdmin" type="teardown">
+<status status="PASS" starttime="20210407 16:28:02.114" endtime="20210407 16:28:04.752"></status>
+</kw>
+<status status="PASS" starttime="20210407 16:25:53.368" endtime="20210407 16:28:04.752"></status>
+</suite>
+<status status="PASS" starttime="20210407 16:25:53.311" endtime="20210407 16:28:04.766"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="Tc">Tc</stat>
+<stat pass="6" fail="0" id="s1-s1" name="webUI操作">Tc.webUI操作</stat>
+<stat pass="6" fail="0" id="s1-s1-s1" name="管理员登录">Tc.webUI操作.管理员登录</stat>
+<stat pass="6" fail="0" id="s1-s1-s1-s1" name="空白数据">Tc.webUI操作.管理员登录.空白数据</stat>
+<stat pass="5" fail="0" id="s1-s1-s1-s1-s1" name="有初中语文初中数学课程">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程</stat>
+<stat pass="3" fail="0" id="s1-s1-s1-s1-s1-s1" name="testCases">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程.testCases</stat>
+<stat pass="2" fail="0" id="s1-s1-s1-s1-s1-s2" name="有初中班">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程.有初中班</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s2-s1" name="testCases">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程.有初中班.testCases</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s2-s2" name="初中班1期">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程.有初中班.初中班1期</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s2-s2-s1" name="学生管理">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程.有初中班.初中班1期.学生管理</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s2-s2-s1-s1" name="添加学生关羽张飞">Tc.webUI操作.管理员登录.空白数据.有初中语文初中数学课程.有初中班.初中班1期.学生管理.添加学生关羽张飞</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s2" name="课程管理">Tc.webUI操作.管理员登录.空白数据.课程管理</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s2-s1" name="testCases01">Tc.webUI操作.管理员登录.空白数据.课程管理.testCases01</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210407 16:26:00.671" level="WARN">Accessing variable items using '&amp;{database}[name]' syntax is deprecated. Use '${database}[name]' instead.</msg>
+<msg timestamp="20210407 16:26:00.682" level="WARN">Accessing variable items using '&amp;{database}[pw]' syntax is deprecated. Use '${database}[pw]' instead.</msg>
+</errors>
+</robot>
